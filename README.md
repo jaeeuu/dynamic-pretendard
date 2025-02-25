@@ -16,6 +16,7 @@ This streamlined approach ensures that only the necessary characters are loaded,
 - **Optimized CSS File**: Significant reduction in file size compared to conventional methods.
 - **Intelligent Subsetting**: Utilizes data-driven character ranking for precise Unicode range adjustments.
 - **Foundation on Pretendard**: Inherits the quality and versatility of the well-established Pretendard font.
+- **Fallback Font Override**: Overrides local Arial fonts with a custom fallback fontFamily for consistent typography across environments.
 
 ## License
 
@@ -25,4 +26,5 @@ For full license details, please see the [LICENSE](LICENSE) file.
 ## Acknowledgements
 
 - [Pretendard](https://github.com/orioncactus/pretendard) by orioncactus – for the excellent base font and its SIL Open Font License.
+- [Fontaine](https://github.com/unjs/fontaine) – for inspiring font optimization approaches.
 - [Google's research](https://www.tdcommons.org/dpubs_series/906/) on Korean character frequency and dynamic subsetting – for inspiring this more efficient approach.
