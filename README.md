@@ -1,30 +1,26 @@
 # dynamic-pretendard
 
-dynamic-pretendard is an improved dynamic subset font built upon the popular [Pretendard](https://github.com/orioncactus/pretendard) font. This project addresses the issue of excessively large CSS file sizes used in traditional dynamic subset implementations, such as those by Google, by optimizing the dynamic subsetting process.
+dynamic-pretendard is an enhanced dynamic subset font built on the popular [Pretendard](https://github.com/orioncactus/pretendard) base. It tackles the challenge of oversized CSS files common in traditional dynamic subsetting—often seen in implementations by Google—by intelligently optimizing Unicode ranges and CSS payload.
 
 ## Overview
 
-Traditional dynamic subset fonts use machine learning to generate a CSS file that covers all required Unicode ranges, often resulting in bulky files. In contrast, dynamic-pretendard:
-- Leverages Google's machine learning-based Korean character frequency rankings.
-- Fine-tunes the Unicode ranges.
-- Reduces the CSS file size for better performance and faster load times.
-
-This streamlined approach ensures that only the necessary characters are loaded, improving efficiency without sacrificing quality.
+Standard dynamic subset solutions leverage machine learning to generate CSS covering extensive Unicode ranges, which often leads to unnecessarily large file sizes.
+dynamic-pretendard, however, adopts a data-driven approach using Korean character frequency insights to fine-tune these ranges, thereby achieving a lighter, faster-loading CSS without compromising on quality.
 
 ## Features
 
-- **Optimized CSS File**: Significant reduction in file size compared to conventional methods.
-- **Intelligent Subsetting**: Utilizes data-driven character ranking for precise Unicode range adjustments.
-- **Foundation on Pretendard**: Inherits the quality and versatility of the well-established Pretendard font.
-- **Fallback Font Override**: Overrides local Arial fonts with a custom fallback fontFamily for consistent typography across environments.
+- **Optimized CSS Delivery**: Dramatically reduces CSS file size by including only essential character subsets.
+- **Data-Driven Subsetting**: Utilizes machine learning-based Korean character rankings to precisely tailor Unicode ranges.
+- **Fallback Font for Pretendard**: Implements a refined fallback mechanism that replaces the local Arial font with a version enhanced through custom font metrics. This ensures consistent typography across diverse environments while mitigating cumulative layout shifts (CLS).
+- **Built on Pretendard**: Inherits the robust design and versatility of the well-established Pretendard font.
 
 ## License
 
-dynamic-pretendard is based on the Pretendard font, which is distributed under the SIL Open Font License. To remain consistent with its source, dynamic-pretendard is also released under the SIL Open Font License.  
+dynamic-pretendard is derived from the Pretendard font, which is distributed under the SIL Open Font License. To maintain consistency with its base, dynamic-pretendard is also released under the SIL Open Font License.  
 For full license details, please see the [LICENSE](LICENSE) file.
 
 ## Acknowledgements
 
-- [Pretendard](https://github.com/orioncactus/pretendard) by orioncactus – for the excellent base font and its SIL Open Font License.
-- [Fontaine](https://github.com/unjs/fontaine) – for inspiring font optimization approaches.
-- [Google's research](https://www.tdcommons.org/dpubs_series/906/) on Korean character frequency and dynamic subsetting – for inspiring this more efficient approach.
+- [Pretendard](https://github.com/orioncactus/pretendard) by orioncactus – for providing the excellent base font under the SIL Open Font License.
+- [Fontaine](https://github.com/unjs/fontaine) – for inspiring innovative approaches to font optimization.
+- [Google's research](https://www.tdcommons.org/dpubs_series/906/) on Korean character frequency and dynamic subsetting – – for motivating a more efficient, data-driven solution.
