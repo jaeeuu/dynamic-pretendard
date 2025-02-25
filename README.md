@@ -7,6 +7,16 @@ dynamic-pretendard is an enhanced dynamic subset font built on the popular [Pret
 Standard dynamic subset solutions leverage machine learning to generate CSS covering extensive Unicode ranges, which often leads to unnecessarily large file sizes.
 dynamic-pretendard, however, adopts a data-driven approach using Korean character frequency insights to fine-tune these ranges, thereby achieving a lighter, faster-loading CSS without compromising on quality.
 
+## Usage
+
+You can use it with
+```css
+html, body{
+  font-family: 'Pretendard', 'Pretendard-fb';
+}
+
+```
+
 ## Features
 
 - **Optimized CSS Delivery**: Dramatically reduces CSS file size by including only essential character subsets.
