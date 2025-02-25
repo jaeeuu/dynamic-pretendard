@@ -6,11 +6,11 @@ dynamic-pretendard is an enhanced dynamic subset font built on the popular [Pret
 
 Standard dynamic subset solutions leverage machine learning to generate CSS covering extensive Unicode ranges, which often leads to unnecessarily large file sizes and a high number of server requests.
 dynamic-pretendard, however, adopts a data-driven approach using Korean character frequency insights to fine-tune these ranges, thereby achieving a lighter, faster-loading CSS without compromising on quality. This also results significantly reduces server file request counts, thereby lowering server load.
-| Type | CSS | Max requests | Single woff2 size |
-|-|:-|:-|:-|
+| Type | CSS | Num | Size |
+|:-|-|-|-|
 | *Original Pretendard dynamic subset* | 540.4KB | 920 | - |
 | *Original Pretendard Variable dynamic subset* | 52.3KB | 92 | 20~30KB |
-| *Dynamic-Pretendard* | 19.0KB | 20 | 30~40KB |
+| **Dynamic-Pretendard** | 19.0KB | 20 | 30~40KB |
 
 
 ## Usage
