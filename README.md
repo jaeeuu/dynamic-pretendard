@@ -4,13 +4,13 @@ dynamic-pretendard is an enhanced dynamic subset font built on the popular [Pret
 
 ## Overview
 
-Standard dynamic subset solutions leverage machine learning to generate CSS covering extensive Unicode ranges, which often leads to unnecessarily large file sizes.
-dynamic-pretendard, however, adopts a data-driven approach using Korean character frequency insights to fine-tune these ranges, thereby achieving a lighter, faster-loading CSS without compromising on quality.
-| Type | Size of CSS | Number of files |
-|-|:-|:-|
-| *Original Pretendard dynamic subset* | 540.4KB | 920 |
-| *Original Pretendard Variable dynamic subset* | 52.3KB | 92 |
-| *Dynamic-Pretendard* | 19.5KB | 18 |
+Standard dynamic subset solutions leverage machine learning to generate CSS covering extensive Unicode ranges, which often leads to unnecessarily large file sizes and a high number of server requests.
+dynamic-pretendard, however, adopts a data-driven approach using Korean character frequency insights to fine-tune these ranges, thereby achieving a lighter, faster-loading CSS without compromising on quality. This also results significantly reduces server file request counts, thereby lowering server load.
+| Type | CSS | Max requests | Single woff2 size |
+|-|:-|:-|:-|
+| *Original Pretendard dynamic subset* | 540.4KB | 920 | - |
+| *Original Pretendard Variable dynamic subset* | 52.3KB | 92 | 20~30KB |
+| *Dynamic-Pretendard* | 19.0KB | 20 | 30~40KB |
 
 
 ## Usage
@@ -18,16 +18,17 @@ dynamic-pretendard, however, adopts a data-driven approach using Korean characte
 You can use it with
 ```css
 html, body{
-  font-family: 'Pretendard', 'Pretendard-fb';
+  font-family: Pretendard, Pretendard-fb;
 }
 
 ```
 
 ## Features
 
+- **Fallback Font for Pretendard**: Implements a refined fallback mechanism that replaces the local Arial font with a version enhanced through custom font metrics. This ensures consistent typography across diverse environments while mitigating cumulative layout shifts (CLS).
 - **Optimized CSS Delivery**: Dramatically reduces CSS file size by including only essential character subsets.
 - **Data-Driven Subsetting**: Utilizes machine learning-based Korean character rankings to precisely tailor Unicode ranges.
-- **Fallback Font for Pretendard**: Implements a refined fallback mechanism that replaces the local Arial font with a version enhanced through custom font metrics. This ensures consistent typography across diverse environments while mitigating cumulative layout shifts (CLS).
+- **Efficient Asset Management**: Optimizes server file requests by bundling the necessary assets, reducing network overhead and server load.
 - **Built on Pretendard**: Inherits the robust design and versatility of the well-established Pretendard font.
 
 ## Note
