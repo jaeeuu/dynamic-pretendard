@@ -18,7 +18,7 @@ dynamic-pretendard, however, adopts a data-driven approach using Korean characte
 You can use it with
 ```css
 html, body{
-  font-family: Pretendard, Pretendard-fb;
+  font-family: dPretendard, dPretendard-fb;
 }
 
 ```
